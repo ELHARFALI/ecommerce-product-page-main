@@ -1,0 +1,20 @@
+// Mobile
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// Tablet
+@mixin tablet {
+    @media (min-width: 767px) and (max-width: 990px) {
+        @content;
+    }
+}
+
+// Large
+@mixin large {
+    @media (min-width: 991px) and (max-width: 50em) {
+        @content;
+    }
+}
