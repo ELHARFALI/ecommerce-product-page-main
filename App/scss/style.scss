@@ -22,3 +22,24 @@ li { list-style: none; }
 body {
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 90;
+    height: 100vh;
+    cursor: pointer;
+
+    &.overlay-active {
+        display: block;
+    }
+}

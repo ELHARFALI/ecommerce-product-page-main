@@ -5,9 +5,15 @@
     }
 }
 
-// Tablet
-@mixin tablet {
+// plus
+@mixin plus {
     @media (min-width: 767px) and (max-width: 990px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 990px) {
         @content;
     }
 }
