@@ -1,0 +1,69 @@
+
+.header {
+
+    &__container {
+        width: 85%;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $Dark-grayish-blue;
+
+        .logo {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav {
+            width: 80%;
+            margin-inline: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .list {
+                display: flex;
+
+                a {
+                    display: block;
+                    margin-right: 30px;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $Dark-grayish-blue;
+                    transition: $transition-one;
+
+                    &:hover {
+                        color: $Very-dark-blue;
+                        border-bottom: 4px solid $Orange;
+                    }
+                }
+            }
+
+            &__content {
+                display: flex;
+                align-items: center;
+
+                .shop {
+                    margin-right: 50px;
+                    position: relative;
+
+                    .num {
+                        position: absolute;
+                        top: -9px;
+                        left: 5px;
+                    }
+                }
+
+                .profile {
+
+                    img {
+                        max-width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
