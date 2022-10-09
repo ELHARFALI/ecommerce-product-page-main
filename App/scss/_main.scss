@@ -1,0 +1,181 @@
+
+.main {
+
+    .container {
+        width: 90%;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+
+        .left {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+                
+                .image {
+                overflow: hidden;
+                // height: 445px;
+                // width: 445px;
+                border-radius: 20px;
+                margin-bottom: 2rem;
+                max-width: 445px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .slider {
+                display: grid;
+                max-width: 445px;
+                grid-template-columns: repeat(4, 1fr);
+
+                .slide {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 70%;
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .right {
+            
+            .title {
+                margin-top: 4rem;
+
+                p {
+                    font-size: .8rem;
+                    color: $Orange;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+
+                h1 {
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                    line-height: 1.1;
+                    margin-bottom: 1.6rem;
+                }
+            }
+
+            .content {
+
+                p {
+                    font-size: .9rem;
+                    color: $Dark-grayish-blue;
+                    line-height: 1.5;
+                    margin-bottom: 1.5rem;
+                }
+
+                .prix {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    margin-right: 1rem;
+                }
+
+                .discount {
+                    color: $Orange;
+                    font-weight: 600;
+                    background-color: #fef0e3;
+                    padding: 3px 6px;
+                }
+
+                .old-prix {
+                    position: relative;
+
+                    .line {
+                        position: absolute;
+                        height: 2px;
+                        width: 60px;
+                        background-color: #444;
+                        top: 13px;
+                        left: 0;
+                    }
+                }
+            }
+
+            .add-carte {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 550px;
+
+                .main__span {
+                    background-color: #f7f8fd;
+                    display: inline-block;
+                        padding: 10px 10px;
+                        width: 45%;
+                        border-radius: 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+
+                    .mines {
+                        display: inline-block;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        a {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: $Orange;
+                        }
+                    }
+
+                    .number {
+                        display: inline-block;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            font-size: 1.1rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .plus {
+                        display: inline-block;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        a {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: $Orange;
+                        }
+                    }
+                }
+
+                .btn {
+                    display: block;
+                    // padding: 6px 80px;
+                    height: 55px;
+                    width: 50%;
+                    border-radius: 15px;
+                    margin-left: 1rem;
+                    background-color: $Orange;
+                    font-size: .8rem;
+                    color: $White;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

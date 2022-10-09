@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.header {
+  position: relative;
+  z-index: 10;
+}
+.header .shoping {
+  display: none;
+  position: absolute;
+  top: 120px;
+  right: 3%;
+  width: 300px;
+  height: 200px;
+  margin-inline: auto;
+  padding: 0.5rem;
+  box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.59);
+}
+.header .shoping.is-active {
+  display: block;
+}
+.header .shoping .title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.header .shoping hr {
+  margin-bottom: 10px;
+}
+.header .shoping .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header__container {
   width: 85%;
   margin-inline: auto;
@@ -134,6 +166,7 @@
 .header__container .nav__content .shop {
   margin-right: 50px;
   position: relative;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .header__container .nav__content .shop {
@@ -141,9 +174,18 @@
   }
 }
 .header__container .nav__content .shop .num {
+  display: none;
   position: absolute;
+  font-size: 0.6rem;
+  background-color: hsl(26deg, 100%, 55%);
+  padding: 1px 6px;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 50px;
   top: -9px;
-  left: 5px;
+  left: 10px;
+}
+.header__container .nav__content .shop .num.active {
+  display: block;
 }
 .header__container .nav__content .profile img {
   max-width: 65%;
@@ -152,6 +194,151 @@
   .header__container .nav__content .profile img {
     max-width: 50%;
   }
+}
+
+.main .container {
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.main .container .left {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .container .left .image {
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  max-width: 445px;
+}
+.main .container .left .image img {
+  max-width: 100%;
+}
+.main .container .left .slider {
+  display: grid;
+  max-width: 445px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.main .container .left .slider .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container .left .slider .slide img {
+  width: 70%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.main .container .right .title {
+  margin-top: 4rem;
+}
+.main .container .right .title p {
+  font-size: 0.8rem;
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.main .container .right .title h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+}
+.main .container .right .content p {
+  font-size: 0.9rem;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.main .container .right .content .prix {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.main .container .right .content .discount {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 600;
+  background-color: #fef0e3;
+  padding: 3px 6px;
+}
+.main .container .right .content .old-prix {
+  position: relative;
+}
+.main .container .right .content .old-prix .line {
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  background-color: #444;
+  top: 13px;
+  left: 0;
+}
+.main .container .right .add-carte {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 550px;
+}
+.main .container .right .add-carte .main__span {
+  background-color: #f7f8fd;
+  display: inline-block;
+  padding: 10px 10px;
+  width: 45%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .container .right .add-carte .main__span .mines {
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container .right .add-carte .main__span .mines a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: hsl(26deg, 100%, 55%);
+}
+.main .container .right .add-carte .main__span .number {
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container .right .add-carte .main__span .number p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.main .container .right .add-carte .main__span .plus {
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container .right .add-carte .main__span .plus a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: hsl(26deg, 100%, 55%);
+}
+.main .container .right .add-carte .btn {
+  display: block;
+  height: 55px;
+  width: 50%;
+  border-radius: 15px;
+  margin-left: 1rem;
+  background-color: hsl(26deg, 100%, 55%);
+  font-size: 0.8rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
 }
 
 *, *::after, *::before {

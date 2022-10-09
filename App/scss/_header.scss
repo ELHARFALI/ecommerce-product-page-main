@@ -1,5 +1,40 @@
 
 .header {
+    position: relative;
+    z-index: 10;
+
+    .shoping {
+        display: none;
+        position: absolute;
+        top: 120px;
+        right: 3%;
+        width: 300px;
+        height: 200px;
+        margin-inline: auto;
+        padding: .5rem;
+        box-shadow: 5px 6px 14px -1px rgba(0,0,0,0.59);
+        -webkit-box-shadow: 5px 6px 14px -1px rgba(0,0,0,0.59);
+        -moz-box-shadow: 5px 6px 14px -1px rgba(0,0,0,0.59);
+
+        &.is-active {
+            display: block;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
     &__container {
         width: 85%;
@@ -145,15 +180,26 @@
                 .shop {
                     margin-right: 50px;
                     position: relative;
+                    cursor: pointer;
 
                     @include mobile {
                         margin-right: 15px;
                     }
 
                     .num {
+                        display: none;
                         position: absolute;
+                        font-size: .6rem;
+                        background-color: $Orange;
+                        padding: 1px 6px;
+                        color: $White;
+                        border-radius: 50px;
                         top: -9px;
-                        left: 5px;
+                        left: 10px;
+
+                        &.active {
+                            display: block;
+                        }
                     }
                 }
 
