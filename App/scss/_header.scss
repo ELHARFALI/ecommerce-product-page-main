@@ -60,6 +60,7 @@
             align-items: center;
             margin-left: 50px;
             transition: $transition;
+            z-index: 99;
 
             &.active {
                 left: 0;
@@ -73,7 +74,7 @@
                 background-color: $White;
                 width: 70%;
                 margin: 0;
-                z-index: 99;
+                // z-index: 99;
                 display: block;
             }
 

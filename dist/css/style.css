@@ -60,6 +60,7 @@
   align-items: center;
   margin-left: 50px;
   transition: all 0.3s ease-in-out;
+  z-index: 99;
 }
 .header__container .nav.active {
   left: 0;
@@ -73,7 +74,6 @@
     background-color: hsl(0deg, 0%, 100%);
     width: 70%;
     margin: 0;
-    z-index: 99;
     display: block;
   }
 }
@@ -176,6 +176,14 @@
   gap: 1.5rem;
   margin-top: 3rem;
 }
+@media (max-width: 767px) {
+  .main .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0;
+  }
+}
 .main .container .left {
   margin: 2rem 0;
   display: flex;
@@ -183,11 +191,46 @@
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  .main .container .left {
+    margin: 0;
+  }
+}
 .main .container .left .image {
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 2rem;
   max-width: 445px;
+}
+@media (max-width: 767px) {
+  .main .container .left .image {
+    max-width: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+    position: relative;
+  }
+  .main .container .left .image .icon-left {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.8rem 1.1rem;
+    left: 2rem;
+    background-color: hsl(0deg, 0%, 100%);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .main .container .left .image .icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.8rem 1.1rem;
+    right: -1.3rem;
+    background-color: hsl(0deg, 0%, 100%);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 }
 .main .container .left .image img {
   max-width: 100%;
@@ -196,6 +239,11 @@
   display: grid;
   max-width: 445px;
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 767px) {
+  .main .container .left .slider {
+    display: none;
+  }
 }
 .main .container .left .slider .slide {
   display: flex;
@@ -207,8 +255,21 @@
   border-radius: 20px;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .main .container .left .icon-left, .main .container .left .icon-right {
+    display: none;
+  }
+}
+.main .container .right {
+  padding: 1rem;
+}
 .main .container .right .title {
   margin-top: 4rem;
+}
+@media (max-width: 767px) {
+  .main .container .right .title {
+    margin-top: 0.5rem;
+  }
 }
 .main .container .right .title p {
   font-size: 0.8rem;
@@ -216,11 +277,24 @@
   font-weight: 700;
   margin-bottom: 1rem;
 }
+@media (max-width: 767px) {
+  .main .container .right .title p {
+    letter-spacing: 0.1rem;
+    font-size: 0.6rem;
+    margin-bottom: 0.7rem;
+  }
+}
 .main .container .right .title h1 {
   font-size: 2.2rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 1.6rem;
+}
+@media (max-width: 767px) {
+  .main .container .right .title h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
 }
 .main .container .right .content p {
   font-size: 0.9rem;
@@ -256,6 +330,11 @@
   align-items: center;
   max-width: 550px;
 }
+@media (max-width: 767px) {
+  .main .container .right .add-carte {
+    flex-direction: column;
+  }
+}
 .main .container .right .add-carte .main__span {
   background-color: #f7f8fd;
   display: inline-block;
@@ -265,6 +344,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .main .container .right .add-carte .main__span {
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
 }
 .main .container .right .add-carte .main__span .mines {
   display: inline-block;
@@ -313,6 +399,12 @@
   font-weight: bold;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .main .container .right .add-carte .btn-main {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -359,6 +451,7 @@ body {
 
 .shoping {
   position: relative;
+  z-index: 9;
 }
 .shoping .shop__container {
   display: none;

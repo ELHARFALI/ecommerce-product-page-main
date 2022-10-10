@@ -9,20 +9,62 @@
         gap: 1.5rem;
         margin-top: 3rem;
 
+
+        @include mobile {
+            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin: 0;
+        }
+
         .left {
             margin: 2rem 0;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+            @include mobile {
+                margin: 0;
+            }
                 
                 .image {
                 overflow: hidden;
-                // height: 445px;
-                // width: 445px;
                 border-radius: 20px;
                 margin-bottom: 2rem;
                 max-width: 445px;
+
+                @include mobile {
+                    max-width: 100%;
+                    margin-bottom: 0;
+                    border-radius: 0;
+                    position: relative;
+
+                    .icon-left {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        padding: .8rem 1.1rem;
+                        left: 2rem;
+                        background-color: $White;
+                        border-radius: 50%;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+
+                    .icon-right {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+
+                        padding: .8rem 1.1rem;
+                        right: -1.3rem;
+                        background-color: $White;
+                        border-radius: 50%;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+                }
 
                 img {
                     max-width: 100%;
@@ -33,6 +75,10 @@
                 display: grid;
                 max-width: 445px;
                 grid-template-columns: repeat(4, 1fr);
+
+                @include mobile {
+                    display: none;
+                }
 
                 .slide {
                     display: flex;
@@ -46,18 +92,36 @@
                     }
                 }
             }
+
+            .icon-left, .icon-right {
+
+                @include plus {
+                    display: none;
+                }
+            }
         }
 
         .right {
+            padding: 1rem;
             
             .title {
                 margin-top: 4rem;
+
+                @include mobile {
+                    margin-top: .5rem;
+                }
 
                 p {
                     font-size: .8rem;
                     color: $Orange;
                     font-weight: 700;
                     margin-bottom: 1rem;
+
+                    @include mobile {
+                        letter-spacing: .1rem;
+                        font-size: .6rem;
+                        margin-bottom: .7rem;
+                    }
                 }
 
                 h1 {
@@ -65,6 +129,11 @@
                     font-weight: bold;
                     line-height: 1.1;
                     margin-bottom: 1.6rem;
+
+                    @include mobile {
+                        font-size: 2rem;
+                        margin-bottom: 1.2rem;
+                    }
                 }
             }
 
@@ -110,15 +179,25 @@
                 align-items: center;
                 max-width: 550px;
 
+                @include mobile {
+                    flex-direction: column;
+                }
+
                 .main__span {
                     background-color: #f7f8fd;
                     display: inline-block;
-                        padding: 10px 10px;
-                        width: 45%;
-                        border-radius: 15px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                    padding: 10px 10px;
+                    width: 45%;
+                    border-radius: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    @include mobile {
+                        width: 90%;
+                        margin-inline: auto;
+                        margin-bottom: 1rem;
+                    }
 
 
                     .mines {
@@ -175,6 +254,11 @@
                     color: $White;
                     font-weight: bold;
                     cursor: pointer;
+
+                    @include mobile {
+                        width: 90%;
+                        margin-inline: auto;
+                    }
                 }
             }
         }
